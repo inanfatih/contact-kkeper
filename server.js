@@ -1,8 +1,14 @@
 //import react from 'react' seklindeki import, ES2015'den geliyor. Bu sekilde import edebilmek icin babel ya da typescript kullanmak gerekiyor.
-
 const express = require('express'); //bu sekilde import etmeye common.js deniyor.
+const connectDB = require('./config/db');
 
 const app = express();
+
+//Connect Database
+connectDB();
+
+//init middleware
+app.use(express.json({ extended: false }));
 
 app.get('/', (req, res) => {
   res.status(201);
