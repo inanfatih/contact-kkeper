@@ -10,13 +10,13 @@ connectDB();
 //init middleware
 app.use(express.json({ extended: false }));
 
-app.get('/', (req, res) => {
-  res.status(201);
-  res.json({ msg: 'Welcome to the ContactKeeper API... ' });
-  //   res.send('<h1>aaaaaaa </h1>'); ===> html tag ile de gonderebilirsin, direkt duz text de.
-  //   res.status(201);               ===> Bir request te send'ten sonra status'u belirleyemezsin. Send'in en sonda olmasi gerekiyor
-  //   res.send('<h1>sds </h1>');     ===> Bir request'te sadece 1 tane send olabiliyor
-});
+// app.get('/', (req, res) => {
+//   res.status(201);
+//   res.json({ msg: 'Welcome to the ContactKeeper API... ' });
+//   //   res.send('<h1>aaaaaaa </h1>'); ===> html tag ile de gonderebilirsin, direkt duz text de.
+//   //   res.status(201);               ===> Bir request te send'ten sonra status'u belirleyemezsin. Send'in en sonda olmasi gerekiyor
+//   //   res.send('<h1>sds </h1>');     ===> Bir request'te sadece 1 tane send olabiliyor
+// });
 
 //Define routes
 app.use('/api/users', require('./routes/users'));
