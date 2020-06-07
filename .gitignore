@@ -104,6 +104,7 @@ dist
 .tern-port
 
 config/default.json
+config/production.json
 
 /client/.env.local
 /client/.env.development.local
